@@ -31,6 +31,8 @@ public class BubbleSorting {
                 break;
             }
         }
-        Arrays.stream(numbersArr).forEach(System.out::println);
+        Arrays.stream(numbersArr).forEach(e -> {
+            System.out.print(e + " ");
+        });
     }
 }

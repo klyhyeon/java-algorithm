@@ -17,9 +17,9 @@ public class BubbleSorting {
             numbersArr[i] = in.nextInt();
         }
         //스왑이 없으면 true
-        boolean noSwap = true;
-        for (int i = 0; i < totalNumber; i++) {
-            for (int j = 0; j < totalNumber - 1; j++) {
+        for (int i = 0; i < totalNumber - 1; i++) {
+            boolean noSwap = true;
+            for (int j = 0; j < totalNumber - i - 1; j++) {
                 if (numbersArr[j] > numbersArr[j+1]) {
                     noSwap = false;
                     int temp = numbersArr[j];

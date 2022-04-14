@@ -31,17 +31,17 @@ public class Coordinate {
 //            loop++;
 //        }
 //
-//        Arrays.sort(oneDimensionArray);
-//        //1열로만 비교
-//        Arrays.sort(coordinateArray, Comparator.comparingInt(o1 -> o1[0]));
-//        //1열, 2열 모두 비교
-//        Arrays.sort(coordinateArray, (o1, o2) -> {
-//            if (o1[0] == o2[0]) {
-//                return Integer.compare(o1[1], o2[1]);
-//            } else {
-//                return Integer.compare(o1[0], o2[0]);
-//            }
-//        });
+        Arrays.sort(oneDimensionArray);
+        //1열로만 비교
+        Arrays.sort(coordinateArray, Comparator.comparingInt(o1 -> o1[0]));
+        //1열, 2열 모두 비교
+        Arrays.sort(coordinateArray, (o1, o2) -> {
+            if (o1[0] == o2[0]) {
+                return Integer.compare(o1[1], o2[1]);
+            } else {
+                return Integer.compare(o1[0], o2[0]);
+            }
+        });
 
 
 //        int swapIndex = 0;

@@ -3,7 +3,7 @@ package sorting;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class MusicVideo {
+public class DecisionAlgorithm1 {
 
     public static void main(String[] args) {
 

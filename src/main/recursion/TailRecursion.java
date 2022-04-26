@@ -11,7 +11,7 @@ public class TailRecursion {
 
     static int factTR(int a, int b) {
         if (a == 0) {
-            return a;
+            return b;
         }
         return factTR(a - 1, a * b);
     }
@@ -21,7 +21,7 @@ public class TailRecursion {
     }
 
     public static void main(String[] args) {
-        System.out.println(fact(5));
-//        System.out.println(factWrap(5));
+//        System.out.println(fact(3));
+        System.out.println(factWrap(5));
     }
 }

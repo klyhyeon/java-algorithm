@@ -26,5 +26,6 @@ public class DFSSubset {
      subset(num + 1);
      ch[num] = 0;
      subset(num + 1);
+     //TODO 수기로 상태트리, 스택 그리기
   }
 }

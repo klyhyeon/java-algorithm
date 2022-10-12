@@ -15,17 +15,23 @@ public class DFSSubset {
   public static void main(String[] args) {
     Scanner sc = new Scanner(new InputStreamReader(System.in));
     inputNum = sc.nextInt();
+    ch = new int[inputNum + 1];
     subset(1);
   }
 
   private static void subset(int num) {
      if (num == inputNum + 1) {
+       for (int i = 1; i <= inputNum; i++) {
+         if (ch[i] == 1) {
+           System.out.print(i + " ");
+         }
+       }
+       System.out.println();
        return;
      }
      ch[num] = 1;
      subset(num + 1);
      ch[num] = 0;
      subset(num + 1);
-     //TODO 수기로 상태트리, 스택 그리기
   }
 }

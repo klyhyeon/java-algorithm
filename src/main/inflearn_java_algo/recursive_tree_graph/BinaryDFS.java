@@ -1,15 +1,5 @@
 package inflearn_java_algo.recursive_tree_graph;
 
-class Node {
-  int data;
-  Node lt, rt;
-
-  public Node(int val) {
-    this.data = val;
-    lt = rt = null;
-  }
-}
-
 public class BinaryDFS {
 
   //이진트리는 부모 - 왼쪽 자식, 오른쪽 자식이 기본 구성

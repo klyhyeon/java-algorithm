@@ -1,5 +1,9 @@
 package inflearn_java_algo.recursive_tree_graph;
 
+import java.util.Deque;
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class BinaryBFS {
 
     int data;
@@ -12,6 +16,18 @@ class MainBFS {
 
     public void BFS(Node root) {
         //TODO 코드 구현하기
+        Queue<Node> nodeQueue = new LinkedList<>();
+        nodeQueue.offer(root);
+        while(!nodeQueue.isEmpty()) {
+            Node currentNode = nodeQueue.poll();
+            System.out.print(currentNode.data + " ");
+            if (currentNode.lt != null) {
+                nodeQueue.offer(currentNode.lt);
+            }
+            if (currentNode.rt != null) {
+                nodeQueue.offer(currentNode.rt);
+            }
+        }
     }
 
 

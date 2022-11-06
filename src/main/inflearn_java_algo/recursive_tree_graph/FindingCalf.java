@@ -9,9 +9,9 @@ public class FindingCalf {
 
     static boolean[] checkPoints = new boolean[10001];
 
-    static int calfStatic = 0;
+    static int[] movingDistances = {5, 1, -1};
 
-    static Queue<Integer> checkPointBox = new LinkedList<>();
+    static Queue<Integer> remainingCheckPoints = new LinkedList<>();
 
     static int answer = 0;
 
@@ -23,35 +23,29 @@ public class FindingCalf {
         System.out.println(solution(input1, input2));
     }
 
-    public static int solution(int hs, int calf) {
-        calfStatic = calf;
+    public static int solution(int startPoint, int calfPoint) {
 
-        checkPointBox.offer(hs);
-        while (!checkPointBox.isEmpty()) {
-            answer++;
-            int checkPointBoxSize = checkPointBox.size();
-            for (int i = 0; i < checkPointBoxSize; i++) {
-                hs = checkPointBox.poll();
-                if (BFS(hs, 1) || BFS(hs, -1) || BFS(hs, 5)) {
-                    return answer;
+        remainingCheckPoints.offer(startPoint);
+        checkPoints[startPoint] = true;
+        while (!remainingCheckPoints.isEmpty()) {
+            int len = remainingCheckPoints.size();
+            for (int i = 0; i < len; i++) {
+                int currentPoint = remainingCheckPoints.poll();
+
+                for (int md : movingDistances) {
+                    int movedPoint = currentPoint + md;
+                    if (movedPoint < 1 || movedPoint > 10000 || checkPoints[movedPoint]) {
+                        continue;
+                    }
+                    if (movedPoint == calfPoint) {
+                        return ++answer;
+                    }
+                    checkPoints[movedPoint] = true;
+                    remainingCheckPoints.offer(movedPoint);
                 }
-                checkPointBox.offer(hs + 1);
-                checkPointBox.offer(hs - 1);
-                checkPointBox.offer(hs + 5);
             }
+            answer++;
         }
         return answer;
-    }
-
-    private static boolean BFS(int hs, int i) {
-        if (hs + i < 0 || checkPoints[hs + i]) {
-            return false;
-        }
-
-        if (hs + i == calfStatic) {
-            return true;
-        }
-        checkPoints[hs + i] = true;
-        return false;
     }
 }

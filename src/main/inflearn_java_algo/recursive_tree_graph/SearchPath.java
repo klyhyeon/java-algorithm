@@ -50,19 +50,19 @@ public class SearchPath {
         System.out.println("answer is: " + answer);
     }
 
-    private static int dfs(int n) {
-        for (int i = 1; i <= v; i++) {
-            if (graph[n][i] != 1 || checkedPoints[i] == 1) {
-                continue;
-            }
-            checkedPoints[i] = 1;
-            dfs(n + 1);
-            if (i == v) {
-                answer++;
-                return 0;
+    private static void dfs(int n) {
+        if (n == v) {
+            answer++;
+        } else {
+            for (int i = 1; i <= v; i++) {
+                if (graph[n][i] != 1 || checkedPoints[i] == 1) {
+                    continue;
+                }
+                checkedPoints[i] = 1;
+                dfs(i);
+                checkedPoints[i] = 0;
+
             }
         }
-        checkedPoints[n] = 0;
-        return 0;
     }
 }

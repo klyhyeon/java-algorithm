@@ -78,23 +78,29 @@ public class Mbti {
                 case 1:
                     value = (Integer) mbtiValues.get(negativeType);
                     mbtiValues.put(negativeType, value + 3);
+                    break;
                 case 2:
                     value = (Integer) mbtiValues.get(negativeType);
                     mbtiValues.put(negativeType, value + 2);
+                    break;
                 case 3:
                     value = (Integer) mbtiValues.get(negativeType);
                     mbtiValues.put(negativeType, value + 1);
+                    break;
                 case 4:
-                    continue;
+                    break;
                 case 5:
                     value = (Integer) mbtiValues.get(positiveType);
                     mbtiValues.put(positiveType, value + 1);
+                    break;
                 case 6:
                     value = (Integer) mbtiValues.get(positiveType);
                     mbtiValues.put(positiveType, value + 2);
+                    break;
                 case 7:
                     value = (Integer) mbtiValues.get(positiveType);
                     mbtiValues.put(positiveType, value + 3);
+                    break;
             }
         }
     }

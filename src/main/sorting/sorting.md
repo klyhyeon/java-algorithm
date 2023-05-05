@@ -46,3 +46,4 @@
 - 피벗을 제외한 왼쪽 리스트와 오른쪽 리스트를 같은 방법으로 다시 정렬합니다.
 
 4. 병합 정렬
+- https://www.youtube.com/watch?v=QAyl79dCO_k

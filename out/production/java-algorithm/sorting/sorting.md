@@ -44,5 +44,7 @@
 3. 퀵 정렬
 - 리스트에 있는 한 요소를 선택하고 이를 기준(pivot)으로 삼아 기준보다 작은 요소들은 모두 기준의 왼쪽, 큰 요소들은 모두 기준의 오른쪽에 위치시킵니다.
 - 피벗을 제외한 왼쪽 리스트와 오른쪽 리스트를 같은 방법으로 다시 정렬합니다.
+- https://www.youtube.com/watch?v=7BDzle2n47c
 
 4. 병합 정렬
+- https://www.youtube.com/watch?v=QAyl79dCO_k

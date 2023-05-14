@@ -1,11 +1,14 @@
 package programmers.main;
 
-import programmers.hash.Phonecketmon;
+import programmers.hash.PhoneBook;
 
 public class Main {
 
     public static void main(String[] args) {
-        Phonecketmon phonecketmon = new Phonecketmon();
-        System.out.println(phonecketmon.solution(new int[]{3,3,3,2,2,2}));
+        PhoneBook phoneBook = new PhoneBook();
+        long start= System.currentTimeMillis();
+        System.out.println(phoneBook.solution(new String[]{"12","123","1235","567","88"}));
+        long end = System.currentTimeMillis();
+        System.out.println(end - start);
     }
 }

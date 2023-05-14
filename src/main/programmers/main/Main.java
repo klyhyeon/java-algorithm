@@ -1,10 +1,11 @@
 package programmers.main;
 
-import programmers.sorting.HIndex;
+import programmers.hash.Phonecketmon;
 
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println(HIndex.solution(new int[]{3, 0, 1, 1, 5}));
+        Phonecketmon phonecketmon = new Phonecketmon();
+        System.out.println(phonecketmon.solution(new int[]{3,3,3,2,2,2}));
     }
 }

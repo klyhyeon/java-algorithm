@@ -1,14 +1,13 @@
 package programmers.main;
 
-import programmers.hash.PhoneBook;
+import programmers.hash.Clothes;
 
 public class Main {
 
     public static void main(String[] args) {
-        PhoneBook phoneBook = new PhoneBook();
-        long start= System.currentTimeMillis();
-        System.out.println(phoneBook.solution(new String[]{"12","123","1235","567","88"}));
-        long end = System.currentTimeMillis();
-        System.out.println(end - start);
+        Clothes clothes = new Clothes();
+        System.out.println(clothes.solution(
+                new String[][]{{"crow_mask", "face"}, {"blue_sunglasses", "face"}, {"smoky_makeup", "face"}})
+        );
     }
 }

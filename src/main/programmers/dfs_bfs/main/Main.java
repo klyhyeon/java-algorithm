@@ -1,11 +1,11 @@
 package programmers.dfs_bfs.main;
 
-import programmers.dfs_bfs.TargetNumRe;
+import programmers.GreatestNum;
 
 public class Main {
 
   public static void main(String[] args) {
-    TargetNumRe targetNumRe = new TargetNumRe();
-    System.out.println(targetNumRe.solution(new int[] {1, 1, 1, 1, 1}, 3));
+    GreatestNum greatestNum = new GreatestNum();
+    System.out.println(greatestNum.solution(new int[] {3, 30, 34, 5, 9}));
   }
 }

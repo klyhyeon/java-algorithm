@@ -22,6 +22,7 @@ public class Budget {
         }
       }
       if (sum > M) {
+        //min <-> max 범위 내에서 해(answer)가 있다는 것이니, mid가 해가 아니었기 때문에 mid를 제외하고 범위를 재정의해야 함
         max = mid - 1;
       } else {
         min = mid + 1;

@@ -33,7 +33,7 @@ public class Booked {
         chosenPerson = unbookedPeople.poll();
       }
       answer.add(chosenPerson.getName());
-      currentTime = +chosenPerson.getTime() + 10;
+      currentTime =+ chosenPerson.getTime() + 10;
     }
 
     return answer;

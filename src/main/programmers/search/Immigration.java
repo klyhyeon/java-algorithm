@@ -13,6 +13,8 @@ package programmers.search;
  * 모든 사람이 심사를 받는데 걸리는 시간의 최솟값을 return 하도록 solution 함수를 작성해주세요.
  */
 
+import java.util.Arrays;
+
 /**
  * 제한사항
  * 입국심사를 기다리는 사람은 1명 이상 1,000,000,000명 이하입니다.
@@ -35,18 +37,11 @@ public class Immigration {
     public long solution(int n, int[] times) {
         long answer = 0;
         if (n == 1) return times[0];
-        long[][] people = new long[times.length][2];
-        int distribute = n / times.length;
-        int additionalDistribute = n - (distribute * times.length);
-        for (int i = 0; i < people.length; i++) {
-            people[i][0] = distribute;
-            if (i == 0) {
-                people[i][0] += additionalDistribute;
-            }
-            people[i][1] = times[i] * people[i][0];
-        }
-        for (int i = people.length - 1; i >= 0; i--) {
-
+        Arrays.sort(times);
+        long time = (long) n * times[0] / 2;
+        for (int i = 0; i < times.length; i++) {
+//            times[i] * n;
+//            times[i + 1] * m;
         }
         return answer;
     }
